@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<title>Untitled</title>
+<link href ="test.css" rel="stylesheet">
+</head>
+
+<style>
+#container {
+    font-family: Arial, sans-serif;
+    max-width: 450px;
+    width:100%;
+    background-color: rgba(255, 179, 0, 0.903);
+    display: grid;
+    font-size:18px;
+}
+#header{
+    white-space: nowrap;
+    margin-top: 16px;
+}
+p#time{
+    margin:auto;
+    padding-left:45px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#wifi{
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 235px;
+}
+#wifi img{
+    height: 22px;
+    width: 25px;
+    padding:1px;
+}
+#login{
+    margin-left:20px; 
+    margin-right:20px;
+}
+input[type="email"],[type="password"],[type="submit"]{
+    border-radius: 12px;
+    border: 1px solid #8c8a8aee;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+}
+input[type="email"],[type="password"]{
+    width: 95%;
+    padding-left: 20px;
+}
+input[type="submit"]{
+    margin-top: 20px;
+    background-color: rgb(37, 89, 230);
+    color: white;
+    height: 55px;
+}
+input[type="checkbox"]:checked ~ input[type="password"] {
+    border-radius: 12px;
+    border: 1px solid #8c8a8aee;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+}
+
+#loginwith p{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    color:rgb(37, 89, 230);
+    border-radius: 12px;
+    border: 1px solid rgb(37, 89, 230);
+    font-size: 18px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+</style>
+
+<body>
+<div id= "container">
+    <div id = 'header'>
+        <p id = "time"><i>9:41</i></p>
+        <div id = "wifi" ><img id ='internet' src="internet.png" alt="Internet Icon">
+        <img id ='wi-fi' src="wifi.png" alt="Wi-Fi Icon">
+        <img id ='battery' src="full-battery.png" alt="Battery Icon">
+        </div>
+    </div>
+    <div style="height:100px">
+        <img style="font-size:20px; margin-left:29px; margin-top: 40px; width: 25px; height:25px " src="arrow.png" alt="Arrow Icon">
+    </div>
+    <div id = 'login'>
+        <div>
+            <p style="font-size:31px; margin-top:27px "><i>Вход</i></p>
+        </div>
+        <div>
+            <p>Электронная почта или телефон</p>
+            <input type="email" name="email" placeholder="taptym@gmail.com" required>
+            <p>Пароль <i>
+                <a style="padding-left:197px"href="">Забыли пароль?</a></i>
+            </p>
+            <input type="password" id="password" pattern="(?=.*p).{10,}" title="Must contain p character and at least 10 character" placeholder="..........">
+            <input type="checkbox" id="show-password">
+            <p></p>
+            <input type="submit" value = "Войти">
+            <p style="margin-left:185px; margin-right:auto; height:40px; padding-top:18px;">или</p>
+            <div id = 'loginwith'><i>
+                <p><a href="">Войти через Google</a>
+                <p><a href="">Войти через Telegram</a></i></p>
+            </div>
+        </div>
+        <p style=" margin-left:50px;padding-top:130px">Нет аккаунта? <a href="">Зарегистрируйтесь</a></p>
+        <img style="width:px; padding-left:px"src=".png" alt="">
+    </div>
+</div>
+
+<script>
+    document.getElementById('show-password').addEventListener('change', function() {
+        var passwordField = document.getElementById('password');
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+        } else {
+            passwordField.type = 'password';
+        }
+    });
+</script>
+</body>
+
+</html>    
+
